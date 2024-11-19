@@ -26,22 +26,22 @@ export function Header() {
           id="switch"
           name="mode"
         />
-        <label htmlFor="switch">Toggle</label>
+        {/* <label htmlFor="switch">Toggle</label> */}
         <nav className={isActive ? 'active' : ''}>
           <NavHashLink smooth to="#home" onClick={closeMenu}>
             Home
           </NavHashLink>
           <NavHashLink smooth to="#about" onClick={closeMenu}>
-            About me
+            Sobre mim
           </NavHashLink>
           <NavHashLink smooth to="#project" onClick={closeMenu}>
-            Project
+            Projetos
           </NavHashLink>
           <NavHashLink smooth to="#contact" onClick={closeMenu}>
-            Contact
+            Contato
           </NavHashLink>
           <a href={Resume} download className="button">
-            Resume
+            Curriculo
           </a>
         </nav>
         <div

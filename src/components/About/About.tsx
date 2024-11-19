@@ -17,7 +17,7 @@ export function About() {
     <Container id="about">
       <div className="about-text">
         <ScrollAnimation animateIn="fadeInLeft">
-          <h2>About me</h2>
+          <h2>Sobre mim</h2>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInLeft" delay={0.1 * 1000}>
           <p>
@@ -32,6 +32,61 @@ export function About() {
           <p>
             So if you're in need of a new website or just looking to revamp your current online presence, I'd love to chat and see how I can help. Let's bring your website dreams to reality together!</p>
         </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInLeft" delay={0.4 * 1000}>
+          <h3>Aqui estão minhas principais habilidades</h3>
+        </ScrollAnimation>
+        <div className="hard-skills">
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.10 * 1000}>
+              <img src={wordpress} alt="Wordpress" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.12 * 1000}>
+              <img src={shopify} alt="shopify" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.13 * 1000}>
+              <img src={reactIcon} alt="React" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.14 * 1000}>
+              <img src={typescriptIcon} alt="Typescript" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.15 * 1000}>
+              <img src={vueIcon} alt="Vue" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.16 * 1000}>
+              <img src={nodeIcon} alt="Node" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.17 * 1000}>
+              <img src={htmlIcon} alt="Html" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.18 * 1000}>
+              <img src={cssIcon} alt="Css" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.19 * 1000}>
+              <img src={boostrapIcon} alt="bootstrap" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.19 * 1000}>
+              <img src={jsIcon} alt="JavaScript" />
+            </ScrollAnimation>
+          </div>
+        </div>
         <ScrollAnimation animateIn="fadeInLeft" delay={0.4 * 1000}>
           <h3>Here are my main skills:</h3>
         </ScrollAnimation>

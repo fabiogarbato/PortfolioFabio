@@ -13,16 +13,16 @@ export function Hero() {
     <Container id="home">
       <div className="hero-text">
         <ScrollAnimation animateIn="fadeInUp">
-          <p>Hello <img src={Hello} alt="Hello" width="20px"/>, I'm</p>
+          <p>Olá <img src={Hello} alt="Hello" width="20px"/>, eu sou</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000}>
-          <h1>Vinayak Singh</h1>
+          <h1>Fábio Garbato</h1>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
           <h3>Full Stack Developer</h3>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
-          <p className="small-resume">4 Years of Experience</p>
+          <p className="small-resume">+4 Anos de Experiência</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.8 * 1000}>
           <BrowserRouter>
