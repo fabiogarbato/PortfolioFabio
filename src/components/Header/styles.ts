@@ -1,80 +1,104 @@
 import styled from "styled-components";
 
-
 export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.8rem 10rem;
-  
   background-color: #21212150;
-  
   backdrop-filter: blur(6px);
-
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   z-index: 1000;
 
-  nav{
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .logo {
+    display: flex;
+    color: #fff;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 2.5rem;
+    text-decoration: none;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .language-button {
+    background: var(--pink);
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: filter 0.25s;
+    width: 60px; /* largura fixa para evitar deslocamento */
+    text-align: center;
+  }
+
+  nav {
     display: flex;
     align-items: center;
     gap: 1.8rem;
-    a{
+    a {
       color: #FFFF;
       padding: 0.6rem;
       font-family: 'Red Hat Display', sans-serif;
       font-weight: 500;
       text-transform: uppercase;
       transition: filter 0.25s;
+      text-decoration: none;
 
-      &.button{
+      &.button {
         padding: 0.6rem 2rem;
       }
 
-      &:hover{
+      &:hover {
         filter: brightness(0.6);
       }
     }
-
   }
 
-  .menu-container{
+  .menu-container {
     cursor: pointer;
     padding: 0.6rem 0;
   }
 
-  .menu{
+  .menu {
     width: 2rem;
     height: 0.2rem;
     background: #FFFF;
     position: relative;
     cursor: pointer;
     display: none;
-
-    &:before{
+    &:before {
       bottom: 0.5rem;
     }
-    &:after{
+    &:after {
       top: 0.5rem;
     }
-
-
-    &.active:before{
+    &.active:before {
       bottom: 0;
       transform: rotate(45deg);
     }
-
-    &.active:after{
+    &.active:after {
       top: 0;
       transform: rotate(135deg);
     }
-
-    &.active{
+    &.active {
       background-color: rgba(0, 0, 0, 0);
     }
-
   }
 
   .menu:before, .menu:after {
@@ -87,7 +111,6 @@ export const Container = styled.header`
     cursor: pointer;
     transition: .6s;
   }
-
 
   input[type=checkbox] {
     height: 0;
@@ -105,8 +128,6 @@ export const Container = styled.header`
     display: block;
     justify-content: center;
     align-items: center;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
     border-radius: 100px;
     position: relative;
     margin-left: auto;
@@ -115,8 +136,8 @@ export const Container = styled.header`
 
   @media only screen and (max-width: 800px) {
     label {
-    position: relative;
-   }
+      position: relative;
+    }
   }
 
   label:after {
@@ -124,13 +145,11 @@ export const Container = styled.header`
     background: #FFF;
     width: 20px;
     height: 20px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
     position: absolute;
     top: 5px;
     left: 4px;
-   transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+    transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
   }
 
   input:checked + label {
@@ -146,10 +165,10 @@ export const Container = styled.header`
     transform: translateX(-100%);
   }
 
-  @media (max-width: 960px){
+  @media (max-width: 960px) {
     padding: 1.8rem 3rem;
 
-    .menu{
+    .menu {
       display: block;
     }
 
@@ -171,15 +190,14 @@ export const Container = styled.header`
       transition: opacity 0.25s;
       background-color: var(--green);
 
-      a.button{
+      a.button {
         background-color: var(--pink);
       }
 
-      &.active{
+      &.active {
         opacity: 1;
         visibility: visible;
       }
     }
   }
-  
-`
+`;
