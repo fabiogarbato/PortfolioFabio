@@ -3,7 +3,9 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState, useContext } from 'react'
 import Resume from '../../assets/Vinayak_Kumar_Singh_Resume.pdf'
-import { LanguageContext } from '../../LanguageContext';
+import { LanguageContext } from '../../LanguageContext'
+import brasil from '../../assets/brasil.png'
+import eua from '../../assets/eua.png'
 
 export function Header() {
   const [isActive, setActive] = useState(false)
@@ -35,12 +37,14 @@ export function Header() {
               id="switch"
               name="mode"
             />
-            <button 
-              className="language-button" 
+            <img 
+              src={language === 'pt' ? brasil : eua} 
+              alt={language === 'pt' ? 'Bandeira do Brasil' : 'Bandeira dos EUA'} 
+              width="36px" 
+              height="24px" 
               onClick={() => setLanguage(language === 'pt' ? 'en' : 'pt')}
-            >
-              {language.toUpperCase()}
-            </button>
+              style={{ cursor: 'pointer' }}
+            />
           </div>
         </div>
 

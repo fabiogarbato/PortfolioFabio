@@ -11,83 +11,83 @@ export function Main() {
       <Particles
         id="tsparticles"
         options={{
-          "fullScreen": {
-            "enable": true,
-            "zIndex": 1
+          fullScreen: {
+            enable: true,
+            zIndex: 1
           },
-          "detectRetina": true,
-          "fpsLimit": 60,
-          "interactivity": {
-            "events": {
-              "onClick": {
-                "enable": true,
-                "mode": "push"
+          detectRetina: true,
+          fpsLimit: 60,
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: "push"
               },
-              "onHover": {
-                "enable": true,
-                "mode": "bubble"
+              onHover: {
+                enable: true,
+                mode: "bubble"
               },
-              "resize": true
+              resize: true
             },
-            "modes": {
-              "bubble": {
-                "distance": 400,
-                "duration": 2,
-                "opacity": 0.8,
-                "size": 10
+            modes: {
+              bubble: {
+                distance: 400,
+                duration: 2,
+                opacity: 0.8,
+                size: 10
               },
-              "push": {
-                "quantity": 4
+              push: {
+                quantity: 4
               }
             }
           },
-          "particles": {
-            "color": {
-              "value": "#00ff00" // Cor verde estilo terminal
+          particles: {
+            color: {
+              value: "#00ff00"
             },
-            "move": {
-              "enable": true,
-              "speed": 1.5,
-              "outMode": "out"
+            move: {
+              enable: true,
+              speed: 1.5,
+              outMode: "out"
             },
-            "number": {
-              "density": {
-                "enable": true,
-                "area": 1000
+            number: {
+              density: {
+                enable: true,
+                area: 1000
               },
-              "value": 100 // Ajusta a quantidade de caracteres
+              value: 50
             },
-            "opacity": {
-              "value": 0.7,
+            opacity: {
+              value: 0.7
             },
-            "shape": {
-              "type": "character",
-              "character": {
-                "value": [
-                  "let", "const", "function", "if", "else", "for", "while", "def", "print", "#include", "int main()", 
+            shape: {
+              type: "character",
+              character: {
+                value: [
+                  "let", "const", "function", "if", "else", "for", "while", "def", "print", "#include", "int main()",
                   "return 0;", ";", "{", "}", "console.log", "import", "from", "class", "=>", "new", "async", "await"
-                ], // Comandos misturados de JS, Python e C
-                "font": "monospace", // Estilo terminal
-                "style": "",
-                "weight": "400"
+                ],
+                font: "monospace",
+                style: "",
+                weight: "400"
               }
             },
-            "size": {
-              "value": 16,
-              "random": true,
-              "animation": {
-                "enable": true,
-                "speed": 3,
-                "minimumValue": 10
+            size: {
+              value: 16,
+              random: true,
+              animation: {
+                enable: true,
+                speed: 3,
+                minimumValue: 10
               }
             }
           },
-          "background": {
-            "color": "#0a0a0a", // Fundo preto estilo terminal
-            "image": "",
-            "position": "50% 50%",
-            "repeat": "no-repeat",
-            "size": "cover"
+          background: {
+            color: "#0a0a0a",
+            image: "",
+            position: "50% 50%",
+            repeat: "no-repeat",
+            size: "cover"
           }
         }}
       />
