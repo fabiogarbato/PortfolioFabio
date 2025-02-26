@@ -26,9 +26,9 @@ export const Container = styled.section`
       flex-direction: column;
       height: 100%;
       color: #FFF;
-      &:hover{
+      &:hover {
         transform: translateY(-5px);
-        background-color: var(--pink);
+        background-color: #23ce6b; /* exemplo de verde */
       }
 
       header{

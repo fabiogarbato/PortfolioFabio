@@ -43,11 +43,11 @@ export function Main() {
           },
           particles: {
             color: {
-              value: "#00ff00"
+              value: "#00ff00" 
             },
             move: {
               enable: true,
-              speed: 1.5,
+              speed: 1, // Velocidade reduzida para um efeito mais suave
               outMode: "out"
             },
             number: {
@@ -55,7 +55,7 @@ export function Main() {
                 enable: true,
                 area: 1000
               },
-              value: 50
+              value: 30 // Número reduzido de partículas
             },
             opacity: {
               value: 0.7
@@ -73,17 +73,17 @@ export function Main() {
               }
             },
             size: {
-              value: 16,
+              value: 12, // Tamanho reduzido das partículas
               random: true,
               animation: {
                 enable: true,
-                speed: 3,
-                minimumValue: 10
+                speed: 2, // Velocidade de animação reduzida
+                minimumValue: 8
               }
             }
           },
           background: {
-            color: "#0a0a0a",
+            color: "#0a0a0a", // Cor de fundo
             image: "",
             position: "50% 50%",
             repeat: "no-repeat",
