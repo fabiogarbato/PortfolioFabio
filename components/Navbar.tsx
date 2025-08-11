@@ -1,5 +1,6 @@
 
 
+
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
@@ -49,6 +50,8 @@ const Navbar: React.FC = () => {
         { href: '#contato', label: texts.navLinks.contact },
     ];
 
+    const resumePath = language === 'pt' ? '/CV_Fabio_PT.pdf' : '/CV_Fabio_EN.pdf';
+
     return (
         <>
             <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-sm bg-white/90 dark:bg-[#0D1117]/80 border-b border-slate-200 dark:border-slate-300/10">
@@ -68,7 +71,7 @@ const Navbar: React.FC = () => {
                              <button onClick={toggleLanguage} className="text-sm font-bold w-10 h-10 flex items-center justify-center rounded-full text-slate-700 hover:text-slate-900 hover:bg-slate-200/50 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/10 transition-colors">
                                 {language === 'pt' ? 'EN' : 'PT'}
                             </button>
-                            <a href="/Resume.pdf" download={`FabioGarbato_Resume_${language.toUpperCase()}.pdf`} className="px-4 py-2 text-sm font-bold text-white bg-emerald-600 rounded-full hover:bg-emerald-700 transition-colors">
+                            <a href={resumePath} download={`FabioGarbato_Resume_${language.toUpperCase()}.pdf`} className="px-4 py-2 text-sm font-bold text-white bg-emerald-600 rounded-full hover:bg-emerald-700 transition-colors">
                                 {texts.navLinks.resume}
                             </a>
                         </nav>
@@ -109,7 +112,7 @@ const Navbar: React.FC = () => {
                            </a>
                         ))}
                          <a 
-                            href="/CV_Fabio_EN.pdf" 
+                            href={resumePath} 
                             download={`FabioGarbato_Resume_${language.toUpperCase()}.pdf`} 
                             className="mt-8 inline-block px-8 py-4 text-xl font-bold text-white bg-emerald-600 rounded-full hover:bg-emerald-700 transition-all transform hover:scale-105"
                         >
