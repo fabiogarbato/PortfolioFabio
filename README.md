@@ -1,16 +1,16 @@
-# Portfolio of Vinayak Singh
+# Run and deploy your AI Studio app
 
-<img src ="https://github.com/CodeVinayak/CodeVinayak/blob/5920a79f4c5977332a67caf91125241cf0fc46b5/www.vinayaksingh.in.png" />
- 
-This project was created with CRA (Create React App)
+This contains everything you need to run your app locally.
 
-This is my portfolio website to introduce myself, here I put my skills, projects, and contact details.
+View your app in AI Studio: https://ai.studio/apps/drive/1lXEFL4DfNOQPQmTVOaDBXy8gnyPv_Hxz?showPreview=true&showCode=true&showAssistant=true
 
-## Technologies used:
-- React
-- Typescript
-- Styled Components
- 
-## To run this project:
-- yarn install
-- yarn run start
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
