@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import ExperienceCard from './components/ExperienceCard';
 import SkillPill from './components/SkillPill';
@@ -13,10 +10,11 @@ import { Education as EducationType } from './types';
 import Footer from './components/Footer';
 import FadeIn from './components/FadeIn';
 import CollapsibleSection from './components/CollapsibleSection';
+import SoftSkillCard from './components/SoftSkillCard';
 
 const App: React.FC = () => {
     const { texts } = useLanguage();
-    const { personalInfo, experience, education, skills, projects, navLinks } = texts;
+    const { personalInfo, experience, education, skills, projects, navLinks, softSkillsTitle, softSkills } = texts;
 
     return (
         <div className="relative text-slate-700 dark:text-slate-300 overflow-x-hidden">
@@ -67,7 +65,7 @@ const App: React.FC = () => {
                                                     <h3 className="font-bold text-slate-900 dark:text-slate-200">{edu.institution}</h3>
                                                     <p className="text-slate-700 dark:text-slate-400">{edu.degree}</p>
                                                 </div>
-                                                {edu.period && <p className="text-xs font-mono text-slate-500 dark:text-slate-400 text-right shrink-0 ml-4">{edu.period}</p>}
+                                                {edu.period && <p className="text-xs font-mono text-slate-600 dark:text-slate-400 text-right shrink-0 ml-4">{edu.period}</p>}
                                             </div>
                                         </div>
                                    </FadeIn>
@@ -91,6 +89,18 @@ const App: React.FC = () => {
                                         </div>
                                     </FadeIn>
                                 ))}
+                            </div>
+                        </CollapsibleSection>
+                    </FadeIn>
+
+                    <FadeIn>
+                        <CollapsibleSection id="soft-skills" title={softSkillsTitle} initialOpen={false}>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+                               {softSkills.map((skill, index) => (
+                                   <FadeIn key={index} delay={index * 100}>
+                                       <SoftSkillCard skill={skill} />
+                                   </FadeIn>
+                               ))}
                             </div>
                         </CollapsibleSection>
                     </FadeIn>

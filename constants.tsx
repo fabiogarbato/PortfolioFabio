@@ -39,6 +39,35 @@ export const WhatsAppIcon = (
     </svg>
 );
 
+export const CommunicationIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+);
+
+export const TeamworkIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+        <circle cx="9" cy="7" r="4"></circle>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+    </svg>
+);
+
+export const ProblemSolvingIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2C9.239 2 7 4.239 7 7c0 2.269 1.482 4.19 3.5 4.815V14h3v-2.185C15.518 11.19 17 9.269 17 7c0-2.761-2.239-5-5-5z"/>
+      <path d="M9 16.5V18h6v-1.5H9z"/>
+      <path d="M9 20h6"/>
+    </svg>
+);
+
+export const ProactivityIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+    </svg>
+);
+
 const ptData: PortfolioContent = {
     personalInfo: {
         greeting: "Olá 👋, eu sou",
@@ -152,6 +181,29 @@ const ptData: PortfolioContent = {
             title: "Cloud (AWS)",
             skills: ["S3Client", "Gerenciamento de Bucket e Objeto", "Configuração de Permissão", "Versionamento", "Integração Lambda", "CloudFront"]
         }
+    ],
+    softSkillsTitle: "HABILIDADES INTERPESSOAIS",
+    softSkills: [
+        {
+            title: "Comunicação",
+            description: "Capacidade de articular ideias de forma clara e concisa, facilitando a colaboração e o entendimento entre equipes técnicas e não técnicas.",
+            icon: CommunicationIcon,
+        },
+        {
+            title: "Trabalho em Equipe",
+            description: "Experiência em ambientes colaborativos, utilizando metodologias ágeis como o Scrum para entregar projetos de forma eficiente e alinhada.",
+            icon: TeamworkIcon,
+        },
+        {
+            title: "Resolução de Problemas",
+            description: "Abordagem analítica para decompor problemas complexos, identificar as causas principais e implementar soluções robustas e escaláveis.",
+            icon: ProblemSolvingIcon,
+        },
+        {
+            title: "Proatividade",
+            description: "Iniciativa para identificar oportunidades de melhoria em processos e código, propondo e implementando soluções que agregam valor ao projeto.",
+            icon: ProactivityIcon,
+        },
     ],
     projects: [
         {
@@ -295,6 +347,29 @@ const enData: PortfolioContent = {
             title: "Cloud (AWS)",
             skills: ["S3Client", "Bucket & Object Management", "Permission Configuration", "Versioning", "Lambda Integration", "CloudFront"]
         }
+    ],
+    softSkillsTitle: "SOFT SKILLS",
+    softSkills: [
+        {
+            title: "Communication",
+            description: "Ability to articulate ideas clearly and concisely, facilitating collaboration and understanding between technical and non-technical teams.",
+            icon: CommunicationIcon,
+        },
+        {
+            title: "Teamwork",
+            description: "Experience in collaborative environments, using agile methodologies like Scrum to deliver projects efficiently and in alignment.",
+            icon: TeamworkIcon,
+        },
+        {
+            title: "Problem Solving",
+            description: "Analytical approach to breaking down complex problems, identifying root causes, and implementing robust and scalable solutions.",
+            icon: ProblemSolvingIcon,
+        },
+        {
+            title: "Proactivity",
+            description: "Initiative to identify opportunities for improvement in processes and code, proposing and implementing solutions that add value to the project.",
+            icon: ProactivityIcon,
+        },
     ],
     projects: [
         {

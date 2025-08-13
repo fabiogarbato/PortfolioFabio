@@ -40,6 +40,12 @@ export interface SkillCategory {
     skills: string[];
 }
 
+export interface SoftSkill {
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+}
+
 export interface Project {
     title: string;
     description: string;
@@ -69,6 +75,8 @@ export interface PortfolioContent {
     experience: Experience[];
     education: Education[];
     skills: SkillCategory[];
+    softSkillsTitle: string;
+    softSkills: SoftSkill[];
     projects: Project[];
     navLinks: NavLinks;
     footer: FooterText;
