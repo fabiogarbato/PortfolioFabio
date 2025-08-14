@@ -207,6 +207,13 @@ const ptData: PortfolioContent = {
     ],
     projects: [
         {
+            title: "Site Armory Consulting",
+            description: "Desenvolvimento do site institucional para a Armory Consulting, empresa especializada em segurança da informação e GRC. O projeto foi construído com Next.js para alta performance e SEO, apresentando os serviços e a expertise da empresa de forma profissional e moderna.",
+            tech: ["React", "Next.js", "Tailwind CSS"],
+            link: "https://armory-consulting.vercel.app",
+            linkText: "Ver Projeto"
+        },
+        {
             title: "Site Restaurante Miyō",
             description: "Desenvolvimento de um site moderno e responsivo para o Restaurante Miyō, substituindo a versão antiga. Foco na experiência do usuário, apresentando um cardápio digital interativo.",
             tech: ["React", "TypeScript", "Tailwind CSS"],
@@ -372,6 +379,13 @@ const enData: PortfolioContent = {
         },
     ],
     projects: [
+        {
+            title: "Armory Consulting Website",
+            description: "Development of the institutional website for Armory Consulting, a company specializing in information security and GRC. The project was built with Next.js for high performance and SEO, showcasing the company's services and expertise in a professional and modern way.",
+            tech: ["React", "Next.js", "Tailwind CSS"],
+            link: "https://armory-consulting.vercel.app",
+            linkText: "View Project"
+        },
         {
             title: "Miyō Restaurant Website",
             description: "Developed a modern and responsive website for Miyō Restaurant, replacing their old site. The focus was on user experience, featuring an interactive digital menu.",
