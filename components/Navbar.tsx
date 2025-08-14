@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
         { href: '#contato', label: texts.navLinks.contact },
     ];
 
-    const resumePath = language === 'pt' ? '/CV_Fabio_PT.pdf' : '/CV_Fabio_EN.pdf';
+    const resumePath = language === 'pt' ? './CV_Fabio_PT.pdf' : './CV_Fabio_EN.pdf';
 
     return (
         <>
