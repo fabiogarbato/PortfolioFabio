@@ -13,7 +13,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
                     <h3 className="text-xl font-bold text-emerald-600 dark:text-green-400">{experience.role}</h3>
                     <p className="text-md font-semibold text-slate-900 dark:text-slate-300">{experience.company}</p>
                 </div>
-                <div className="text-xs font-mono text-slate-500 dark:text-slate-400 text-right shrink-0 ml-4">{experience.period}</div>
+                <div className="text-xs font-mono text-slate-600 dark:text-slate-400 text-right shrink-0 ml-4">{experience.period}</div>
             </div>
             <ul className="mt-4 list-disc list-inside space-y-2 text-slate-700 dark:text-slate-400">
                 {experience.description.map((item, index) => (

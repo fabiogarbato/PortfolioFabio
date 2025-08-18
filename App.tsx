@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import ExperienceCard from './components/ExperienceCard';
 import SkillPill from './components/SkillPill';
 import AnimatedBackground from './components/AnimatedBackground';
@@ -12,9 +13,65 @@ import FadeIn from './components/FadeIn';
 import CollapsibleSection from './components/CollapsibleSection';
 import SoftSkillCard from './components/SoftSkillCard';
 
+const ChevronLeftIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+        <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+);
+
+const ChevronRightIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+);
+
 const App: React.FC = () => {
     const { texts } = useLanguage();
     const { personalInfo, experience, education, skills, projects, navLinks, softSkillsTitle, softSkills } = texts;
+
+    const carouselRef = useRef<HTMLDivElement>(null);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(false);
+
+    const checkScrollButtons = useCallback(() => {
+        const el = carouselRef.current;
+        if (el) {
+            const tolerance = 2;
+            const { scrollLeft, scrollWidth, clientWidth } = el;
+            setCanScrollLeft(scrollLeft > tolerance);
+            setCanScrollRight(scrollLeft < scrollWidth - clientWidth - tolerance);
+        }
+    }, []);
+
+    useEffect(() => {
+        const el = carouselRef.current;
+        if (el) {
+            checkScrollButtons();
+            el.addEventListener('scroll', checkScrollButtons, { passive: true });
+            window.addEventListener('resize', checkScrollButtons);
+
+            const mutationObserver = new MutationObserver(checkScrollButtons);
+            mutationObserver.observe(el, { childList: true });
+
+            return () => {
+                el.removeEventListener('scroll', checkScrollButtons);
+                window.removeEventListener('resize', checkScrollButtons);
+                mutationObserver.disconnect();
+            };
+        }
+    }, [checkScrollButtons, projects]);
+
+    const handleScroll = (direction: 'left' | 'right') => {
+        const el = carouselRef.current;
+        if (el) {
+            const scrollAmount = el.clientWidth;
+            el.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth',
+            });
+        }
+    };
+
 
     return (
         <div className="relative text-slate-700 dark:text-slate-300 overflow-x-hidden">
@@ -26,13 +83,13 @@ const App: React.FC = () => {
                 <div className="mx-auto max-w-screen-xl px-6 md:px-12 lg:px-24 pb-24 space-y-16">
                     <FadeIn>
                         <CollapsibleSection id="sobre" title={navLinks.about}>
-                             <p className="pt-4 text-slate-700 dark:text-slate-400 max-w-3xl leading-relaxed">{personalInfo.summary}</p>
+                             <p className="text-slate-700 dark:text-slate-400 max-w-3xl leading-relaxed">{personalInfo.summary}</p>
                         </CollapsibleSection>
                     </FadeIn>
 
                     <FadeIn>
-                        <CollapsibleSection id="experience" title={navLinks.experience} initialOpen={false}>
-                            <div className="space-y-8 pt-4">
+                        <CollapsibleSection id="experience" title={navLinks.experience}>
+                            <div className="space-y-8">
                                 {experience.map((exp, index) => (
                                     <FadeIn key={index} delay={index * 100}>
                                         <ExperienceCard experience={exp} />
@@ -43,20 +100,46 @@ const App: React.FC = () => {
                     </FadeIn>
                     
                     <FadeIn>
-                        <CollapsibleSection id="projetos" title={navLinks.projects} initialOpen={false}>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
-                               {projects.map((proj, index) => (
-                                   <FadeIn key={index} delay={index * 100}>
-                                       <ProjectCard project={proj} />
-                                   </FadeIn>
-                               ))}
+                        <CollapsibleSection id="projetos" title={navLinks.projects}>
+                            <div className="relative group">
+                                <div
+                                    ref={carouselRef}
+                                    className="flex items-stretch overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar -mx-3"
+                                >
+                                   {projects.map((proj, index) => (
+                                       <div key={index} className="snap-start flex-shrink-0 w-full md:w-1/2 px-3">
+                                           <FadeIn delay={index * 100}>
+                                                <div className="h-full">
+                                                    <ProjectCard project={proj} />
+                                                </div>
+                                           </FadeIn>
+                                       </div>
+                                   ))}
+                                </div>
+
+                                <button
+                                    onClick={() => handleScroll('left')}
+                                    disabled={!canScrollLeft}
+                                    aria-label="Previous project"
+                                    className="flex absolute top-1/2 left-2 md:left-0 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 items-center justify-center rounded-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm text-slate-700 dark:text-slate-300 shadow-md ring-1 ring-slate-900/10 dark:ring-white/10 transition-all duration-300 disabled:opacity-0 disabled:cursor-not-allowed hover:scale-110 hover:bg-white dark:hover:bg-slate-900"
+                                >
+                                    <ChevronLeftIcon />
+                                </button>
+                                <button
+                                    onClick={() => handleScroll('right')}
+                                    disabled={!canScrollRight}
+                                    aria-label="Next project"
+                                    className="flex absolute top-1/2 right-2 md:right-0 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 items-center justify-center rounded-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm text-slate-700 dark:text-slate-300 shadow-md ring-1 ring-slate-900/10 dark:ring-white/10 transition-all duration-300 disabled:opacity-0 disabled:cursor-not-allowed hover:scale-110 hover:bg-white dark:hover:bg-slate-900"
+                                >
+                                    <ChevronRightIcon />
+                                </button>
                             </div>
                         </CollapsibleSection>
                     </FadeIn>
                     
                      <FadeIn>
-                        <CollapsibleSection id="education" title={navLinks.education} initialOpen={false}>
-                            <div className="pt-4">
+                        <CollapsibleSection id="education" title={navLinks.education}>
+                            <div>
                                 {education.map((edu: EducationType, index: number) => (
                                    <FadeIn key={index} delay={index * 100}>
                                        <div className="mb-6 p-4 rounded-lg bg-white dark:bg-slate-800/50 ring-1 ring-slate-900/10 dark:ring-white/10 shadow-md dark:shadow-none">
@@ -75,8 +158,8 @@ const App: React.FC = () => {
                     </FadeIn>
 
                     <FadeIn>
-                        <CollapsibleSection id="skills" title={navLinks.skills} initialOpen={false}>
-                            <div className="space-y-6 pt-4">
+                        <CollapsibleSection id="skills" title={navLinks.skills}>
+                            <div className="space-y-6">
                                 {skills.map((category, index) => (
                                     <FadeIn key={index} delay={index * 50}>
                                         <div>
@@ -94,8 +177,8 @@ const App: React.FC = () => {
                     </FadeIn>
 
                     <FadeIn>
-                        <CollapsibleSection id="soft-skills" title={softSkillsTitle} initialOpen={false}>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+                        <CollapsibleSection id="soft-skills" title={softSkillsTitle}>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                                {softSkills.map((skill, index) => (
                                    <FadeIn key={index} delay={index * 100}>
                                        <SoftSkillCard skill={skill} />

@@ -32,7 +32,7 @@ const AnimatedBackground: React.FC = () => {
                     animation-iteration-count: infinite;
                 }
                 html:not(.dark) .float-keyword {
-                   opacity: 0.15;
+                   opacity: 0.1;
                 }
                  html.dark .float-keyword {
                    opacity: 0.3;

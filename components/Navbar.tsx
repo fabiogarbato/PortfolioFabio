@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
@@ -58,7 +59,7 @@ const Navbar: React.FC = () => {
                 <div className="mx-auto max-w-screen-xl px-6 md:px-12 lg:px-24">
                     <div className="flex justify-between items-center h-20">
                         <a href="#inicio" onClick={(e) => handleScroll(e, '#inicio')} className="text-xl font-bold text-slate-900 dark:text-white transition-transform hover:scale-105">
-                            &lt;FábioGarbato/&gt; <span className="font-medium text-slate-500 dark:text-slate-400">{language.toUpperCase()}</span>
+                            &lt;FábioGarbato/&gt; <span className="font-medium text-slate-600 dark:text-slate-400">{language.toUpperCase()}</span>
                         </a>
                         
                         <nav className="hidden md:flex items-center space-x-4">

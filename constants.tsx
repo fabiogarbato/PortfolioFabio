@@ -149,11 +149,6 @@ const ptData: PortfolioContent = {
             institution: "Universidade Positivo",
             degree: "Bacharelado em Ciência da Computação",
             period: "2020 - 2023"
-        },
-        {
-            institution: "Colégio Objetivo Penha",
-            degree: "Ensino Médio",
-            period: ""
         }
     ],
     skills: [
@@ -322,11 +317,6 @@ const enData: PortfolioContent = {
             institution: "Universidade Positivo",
             degree: "Bachelor's Degree in Computer Science",
             period: "2020 - 2023"
-        },
-        {
-            institution: "Colégio Objetivo Penha",
-            degree: "High School",
-            period: ""
         }
     ],
     skills: [
