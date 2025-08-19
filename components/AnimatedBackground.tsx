@@ -25,24 +25,17 @@ const AnimatedBackground: React.FC = () => {
                     50% { transform: translateY(-40px) translateX(20px) rotate(10deg); }
                     100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
                 }
-                .float-keyword {
-                    opacity: 0;
+                .animate-float {
                     animation-name: float;
                     animation-timing-function: ease-in-out;
                     animation-iteration-count: infinite;
-                }
-                html:not(.dark) .float-keyword {
-                   opacity: 0.1;
-                }
-                 html.dark .float-keyword {
-                   opacity: 0.3;
                 }
                 `}
             </style>
             {animatedKeywords.map(k => (
                 <span
                     key={k.id}
-                    className="float-keyword absolute text-emerald-500 dark:text-green-400 font-mono text-sm"
+                    className="animate-float absolute text-slate-300 opacity-50 dark:text-emerald-400 dark:opacity-20 font-mono text-sm"
                     style={{
                         top: k.top,
                         left: k.left,

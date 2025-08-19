@@ -74,7 +74,7 @@ const App: React.FC = () => {
 
 
     return (
-        <div className="relative text-slate-700 dark:text-slate-300 overflow-x-hidden">
+        <div className="relative overflow-x-hidden">
             <AnimatedBackground />
             <Navbar />
             <main className="relative z-10">
@@ -83,7 +83,7 @@ const App: React.FC = () => {
                 <div className="mx-auto max-w-screen-xl px-6 md:px-12 lg:px-24 pb-24 space-y-16">
                     <FadeIn>
                         <CollapsibleSection id="sobre" title={navLinks.about}>
-                             <p className="text-slate-700 dark:text-slate-400 max-w-3xl leading-relaxed">{personalInfo.summary}</p>
+                             <p className="dark:text-slate-400 max-w-3xl leading-relaxed">{personalInfo.summary}</p>
                         </CollapsibleSection>
                     </FadeIn>
 
@@ -142,7 +142,7 @@ const App: React.FC = () => {
                             <div>
                                 {education.map((edu: EducationType, index: number) => (
                                    <FadeIn key={index} delay={index * 100}>
-                                       <div className="mb-6 p-4 rounded-lg bg-white dark:bg-slate-800/50 ring-1 ring-slate-900/10 dark:ring-white/10 shadow-md dark:shadow-none">
+                                       <div className="mb-6 p-4 rounded-lg bg-white dark:bg-slate-800/50 dark:backdrop-blur-sm ring-1 ring-slate-900/10 dark:ring-white/10 shadow-md dark:shadow-none">
                                             <div className="flex justify-between items-start">
                                                 <div>
                                                     <h3 className="font-bold text-slate-900 dark:text-slate-200">{edu.institution}</h3>
@@ -193,7 +193,7 @@ const App: React.FC = () => {
                              <div className="mb-6 justify-center">
                                  <h2 className="text-3xl font-bold tracking-tight text-slate-800 dark:text-white">{personalInfo.contactTitle}</h2>
                             </div>
-                            <p className="text-slate-700 dark:text-slate-400 mb-8 max-w-xl mx-auto">{personalInfo.contactSubtitle}</p>
+                            <p className="dark:text-slate-400 mb-8 max-w-xl mx-auto">{personalInfo.contactSubtitle}</p>
                             <div className="flex items-center justify-center space-x-6">
                                 {personalInfo.socials.map(social => {
                                     const isWhatsApp = social.name === 'WhatsApp';

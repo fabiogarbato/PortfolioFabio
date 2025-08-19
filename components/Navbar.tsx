@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
@@ -51,11 +52,11 @@ const Navbar: React.FC = () => {
         { href: '#contato', label: texts.navLinks.contact },
     ];
 
-    const resumePath = language === 'pt' ? './CV_Fabio_PT.pdf' : './CV_Fabio_EN.pdf';
+    const resumePath = language === 'pt' ? '/CV_Fabio_PT.pdf' : '/CV_Fabio_EN.pdf';
 
     return (
         <>
-            <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-sm bg-white/90 dark:bg-[#0D1117]/80 border-b border-slate-200 dark:border-slate-300/10">
+            <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white dark:bg-[#0D1117]/80 dark:backdrop-blur-sm border-b border-slate-200 dark:border-slate-300/10">
                 <div className="mx-auto max-w-screen-xl px-6 md:px-12 lg:px-24">
                     <div className="flex justify-between items-center h-20">
                         <a href="#inicio" onClick={(e) => handleScroll(e, '#inicio')} className="text-xl font-bold text-slate-900 dark:text-white transition-transform hover:scale-105">
@@ -108,7 +109,7 @@ const Navbar: React.FC = () => {
 
                     <nav className="flex flex-col space-y-6 text-center">
                         {navLinks.map(link => (
-                           <a key={link.href} href={link.href} onClick={(e) => handleScroll(e, link.href)} className="block text-center text-3xl font-bold py-4 text-slate-900 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-white transition-colors">
+                           <a key={link.href} href={link.href} onClick={(e) => handleScroll(e, link.href)} className="block text-center text-3xl font-bold py-4 text-slate-900 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-white transition-colors">
                                {link.label}
                            </a>
                         ))}
