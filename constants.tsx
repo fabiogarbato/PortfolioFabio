@@ -216,17 +216,17 @@ const ptData: PortfolioContent = {
             linkText: "Ver Projeto"
         },
         {
-            title: "Gerenciador de Tarefas Colaborativo",
-            description: "Uma aplicação de gerenciamento de tarefas que permite a colaboração em tempo real, construída com React e Firebase para sincronização de dados.",
-            tech: ["React", "Firebase", "Tailwind CSS"],
-            link: "https://gerenciador-de-tarefas-colaborativo-984102563447.us-west1.run.app",
+            title: "Imersão Nexa - IA para Gestão Comercial",
+            description: "Landing page para imersão educacional em Inteligência Artificial aplicada à gestão comercial B2B. Integração com sistema de pagamento e inscrição, com design focado em conversão.",
+            tech: ["React", "Tailwind CSS", "InfinitePay"],
+            link: "https://imersao.nexainteligencia.com",
             linkText: "Ver Projeto"
         },
         {
-            title: "Logo de Criptomoedas em Tempo Real",
-            description: "Um gerador de logos para criptomoedas que utiliza IA para criar imagens únicas baseadas em nomes de tokens. Construído com Gemini API.",
-            tech: ["React", "Gemini API", "Tailwind CSS"],
-            link: "https://cat-logo-de-criptomoedas-em-tempo-real-761735705150.us-west1.run.app",
+            title: "Nexa Inteligência Comercial",
+            description: "Site institucional da Nexa, consultoria especializada em inteligência comercial e estratégia cognitiva. Apresenta os serviços de auditoria, consultoria e insights preditivos com IA.",
+            tech: ["React", "Tailwind CSS", "IA"],
+            link: "https://nexainteligencia.com",
             linkText: "Ver Projeto"
         }
     ],
@@ -384,17 +384,17 @@ const enData: PortfolioContent = {
             linkText: "View Project"
         },
         {
-            title: "Collaborative Task Manager",
-            description: "A task management application that allows real-time collaboration, built with React and Firebase for data synchronization.",
-            tech: ["React", "Firebase", "Tailwind CSS"],
-            link: "https://gerenciador-de-tarefas-colaborativo-984102563447.us-west1.run.app",
+            title: "Nexa Immersion - AI for Sales Management",
+            description: "Landing page for an educational immersion in Artificial Intelligence applied to B2B sales management. Integrated with payment and registration system, with a conversion-focused design.",
+            tech: ["React", "Tailwind CSS", "InfinitePay"],
+            link: "https://imersao.nexainteligencia.com",
             linkText: "View Project"
         },
         {
-            title: "Real-time Crypto Logo",
-            description: "A logo generator for cryptocurrencies that uses AI to create unique images based on token names. Built with the Gemini API.",
-            tech: ["React", "Gemini API", "Tailwind CSS"],
-            link: "https://cat-logo-de-criptomoedas-em-tempo-real-761735705150.us-west1.run.app",
+            title: "Nexa Commercial Intelligence",
+            description: "Institutional website for Nexa, a consultancy specializing in commercial intelligence and cognitive strategy. Showcases auditing, consulting, and AI-powered predictive insights services.",
+            tech: ["React", "Tailwind CSS", "AI"],
+            link: "https://nexainteligencia.com",
             linkText: "View Project"
         }
     ],
