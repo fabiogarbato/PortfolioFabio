@@ -129,6 +129,7 @@ const ptData: PortfolioContent = {
             period: "Junho 2024 - Outubro 2025",
             description: [
                 "Liderei a migração do módulo legado de Pós-Venda e Ordem de Serviço de Pascal para React.js, Node.js e Express, reconstruindo todos os fluxos principais e reduzindo em 70% o tempo médio de processamento.",
+                "Desenvolvi aplicações web em React e Node.js usando Firebase para autenticação e dados em tempo real, junto com as APIs REST por trás delas.",
                 "Criei uma API de processamento e armazenamento de imagens com compressão automática e migrei a hospedagem de mídia da empresa para um novo servidor sem tirar o site do ar.",
                 "Entreguei funcionalidades orientadas a eventos com Apache Kafka no Azure, com deploy por pipelines de CI/CD."
             ]
@@ -331,6 +332,7 @@ const enData: PortfolioContent = {
             period: "June 2024 - October 2025",
             description: [
                 "Led the migration of the legacy Post-Sales and Service Order module from Pascal to React.js, Node.js and Express, rebuilding every core workflow and cutting average processing time by 70%.",
+                "Built web applications in React and Node.js using Firebase for authentication and real-time data, along with the REST APIs behind them.",
                 "Built an image processing and storage API with automatic compression, and moved the company's media hosting to a new server with no downtime on the live site.",
                 "Delivered event-driven features with Apache Kafka on Azure, deployed through CI/CD pipelines."
             ]
