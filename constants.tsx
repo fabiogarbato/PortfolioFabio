@@ -68,19 +68,21 @@ export const ProactivityIcon = (
     </svg>
 );
 
+const LINKEDIN_URL = 'https://www.linkedin.com/in/fabiogarbato';
+
 const ptData: PortfolioContent = {
     personalInfo: {
         greeting: "Olá 👋, eu sou",
         name: "Fábio Garbato",
-        title: "Desenvolvedor Full Stack",
-        location: "Curitiba - PR, Brazil",
+        title: "Engenheiro de Software Full Stack Sênior",
+        location: "Curitiba - PR, Brasil",
         email: "fabiogarbato3006@gmail.com",
         phone: "(41) 98737-2059",
         whatsapp: "5541987372059",
-        summary: "Desenvolvedor com experiência em HTML5, C#, .NET, MS-SQL Server, CSS3, JavaScript (ES6+), Delphi, Python, React.js, VueJS, Bootstrap, Node.js, PostgreSQL, MySQL e APIs REST JSON. Experiência em Scrum, testes unitários, Git (Gitea) e GitHub para controle de código e versionamento de projetos, bem como desenvolvimento de e-commerce (B2B, B2C) com Magento.",
-        yearsOfExperience: "+4 Anos de Experiência",
+        summary: "Engenheiro de software full stack com 5 anos desenvolvendo software, a maior parte em TypeScript, com React no front-end e Node.js e NestJS no back-end. Hoje trabalho no núcleo do Nexa Pulse, um SaaS de analytics multi-tenant, e sou engenheiro sênior no CreditFlow, uma plataforma de análise de crédito usada por várias empresas. Nos dois produtos também cuido das funcionalidades de IA, como RAG, busca semântica e servidores MCP. Gosto de assumir uma funcionalidade da tela até o banco de dados, e uso agentes de código todos os dias, revisando tudo o que eles produzem antes de ir para produção.",
+        yearsOfExperience: "+5 Anos de Experiência em Desenvolvimento",
         socials: [
-            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/f%C3%A1bio-garbato-046316196', icon: LinkedinIcon },
+            { name: 'LinkedIn', url: LINKEDIN_URL, icon: LinkedinIcon },
             { name: 'GitHub', url: 'https://github.com/fabiogarbato', icon: GithubIcon },
             { name: 'WhatsApp', url: 'https://wa.me/5541987372059', icon: WhatsAppIcon }
         ],
@@ -100,51 +102,71 @@ const ptData: PortfolioContent = {
     },
     experience: [
         {
+            company: "Nexa Inteligência Estratégica",
+            role: "CTO e Arquiteto de Software (Contrato)",
+            period: "Fevereiro 2026 - Atualmente",
+            description: [
+                "Desenvolvo e mantenho o núcleo do Nexa Pulse, um SaaS de analytics multi-tenant: aplicação web em React e TypeScript, API em NestJS e coletor de dados em Go, com Docker Compose em staging e produção.",
+                "Montei o processo de release: o deploy vai primeiro para homologação, confere o commit no ar por um endpoint de health e só chega em produção o que foi validado. Mudanças de banco entram como migrations versionadas.",
+                "Investigo problemas de produção reproduzindo em homologação, que roda sobre uma cópia anonimizada dos dados reais, e depois corrijo e publico.",
+                "Implementei o isolamento entre clientes com row-level security no PostgreSQL, além de um pipeline de RAG e um servidor MCP que dá a agentes de IA acesso controlado aos dados da plataforma."
+            ]
+        },
+        {
+            company: "SIACorp",
+            role: "Engenheiro de Software Sênior (Contrato)",
+            period: "Outubro 2025 - Atualmente",
+            description: [
+                "Engenheiro sênior no CreditFlow, plataforma de análise e gestão de crédito implantada em várias empresas clientes e usada por analistas para apoiar decisões de crédito.",
+                "Resolvo chamados e incidentes de produção nos ambientes dos clientes, do diagnóstico à correção e à resposta escrita para o cliente.",
+                "Construí a extração de dados de documentos não estruturados, a validação automática de políticas e limites de crédito, o roteamento de aprovação por alçada e a integração com ERP e sistemas contábeis.",
+                "Cuido das funcionalidades de IA do CreditVision e do CreditChat, com RAG e busca semântica sobre as políticas de crédito e análises anteriores, sempre citando a fonte de cada resposta."
+            ]
+        },
+        {
             company: "CCM do Brasil",
-            role: "FullStack Software Developer",
-            period: "Junho 2024 - Atualmente",
+            role: "Desenvolvedor Full Stack Pleno",
+            period: "Junho 2024 - Outubro 2025",
             description: [
-                "Desenvolvimento de aplicações web usando React, Bootstrap, Node.js, JavaScript, HTML e CSS.",
-                "Integração com Firebase para autenticação e banco de dados em tempo real, além do desenvolvimento de APIs REST.",
-                "Implementação de programação concorrente para otimização de processos e melhoria de performance de aplicações."
+                "Liderei a migração do módulo legado de Pós-Venda e Ordem de Serviço de Pascal para React.js, Node.js e Express, reconstruindo todos os fluxos principais e reduzindo em 70% o tempo médio de processamento.",
+                "Criei uma API de processamento e armazenamento de imagens com compressão automática e migrei a hospedagem de mídia da empresa para um novo servidor sem tirar o site do ar.",
+                "Entreguei funcionalidades orientadas a eventos com Apache Kafka no Azure, com deploy por pipelines de CI/CD."
             ]
         },
         {
             company: "MPS Informática",
-            role: "FullStack Developer",
-            period: "Janeiro 2024 - Agosto 2024",
+            role: "Desenvolvedor de Software (Estágio a Pleno)",
+            period: "Outubro 2021 - Setembro 2024",
             description: [
-                "Desenvolvimento de aplicações web com HTML5, CSS3, Node.js, React, Bootstrap e Vue.js.",
-                "Manutenção de sistemas legados existentes com Delphi 7/XE.",
-                "Colaboração com equipes multidisciplinares, utilizando a metodologia SCRUM.",
-                "Desenvolvimento de scripts Python para extração de dados.",
-                "Desenvolvimento de APIs REST utilizando C# e .NET."
+                "Mantive uma API de integração em C# e ASP.NET que trocava JSON entre sistemas.",
+                "Otimizei procedures, triggers e consultas no SQL Server, deixando as consultas que ajustei até 60% mais rápidas.",
+                "Fiz uma migração de banco de dados de ponta a ponta, com rotinas de extração em Python no sistema legado e validação dos dados migrados.",
+                "Desenvolvi interfaces web em React e escrevi testes unitários."
             ]
         },
         {
-            company: "MPS Informática",
-            role: "Desenvolvedor Júnior",
-            period: "Agosto 2022 - Dezembro 2023",
+            company: "Grupo Positivo",
+            role: "Estagiário de Redes e Infraestrutura (N3)",
+            period: "Janeiro 2021 - Outubro 2021",
             description: [
-                "Manutenção de sistemas legados existentes com Delphi 7/XE.",
-                "Desenvolvimento e manutenção de APIs REST utilizando C# e .NET.",
-                "Colaboração com equipes multidisciplinares, utilizando a metodologia SCRUM.",
-                "Criação de Procedures, Triggers e Views em banco de dados MS-SQL Server.",
-                "Desenvolvimento de queries complexas para dar suporte a clientes em banco de dados MS-SQL Server.",
-                "Testes Unitários."
+                "Firewalls FortiGate, switching Cisco, segmentação de VLAN e telefonia VoIP Cisco."
             ]
         },
         {
-            company: "MPS Informática",
-            role: "Estagiário - Desenvolvedor",
-            period: "Outubro 2021 - Julho 2022",
+            company: "Olimpio Tecnologia",
+            role: "Estagiário de Suporte Técnico (N1)",
+            period: "Fevereiro 2020 - Janeiro 2021",
             description: [
-                "Manutenção de sistemas legados existentes com Delphi 7/XE.",
-                "Desenvolvimento e manutenção de APIs REST utilizando C# e .NET."
+                "Suporte a ERP envolvendo bancos de dados SQL, redes e hardware."
             ]
         }
     ],
     education: [
+        {
+            institution: "Universidade Católica do Salvador",
+            degree: "Pós-graduação Lato Sensu em Machine Learning (em andamento)",
+            period: "2026 - 2027"
+        },
         {
             institution: "Universidade Positivo",
             degree: "Bacharelado em Ciência da Computação",
@@ -153,28 +175,28 @@ const ptData: PortfolioContent = {
     ],
     skills: [
         {
-            title: "Linguagens de Programação",
-            skills: ["Python", "Javascript (ES6+)", "Delphi 7/XE/10", "C#", "HTML5", "CSS3"]
+            title: "Front-end",
+            skills: ["TypeScript", "JavaScript", "React", "Next.js", "Vite", "Tailwind CSS", "TanStack Query", "Zustand", "HTML5", "CSS3"]
         },
         {
-            title: "Frameworks & Bibliotecas",
-            skills: ["React", "Node.js", "VueJS", "Express", "Bootstrap", "Flask", ".NET 5.0/8.0", "Sequelize"]
+            title: "Back-end",
+            skills: ["NestJS", "Node.js", "Express", "C#", ".NET", "Go", "Python", "APIs REST"]
+        },
+        {
+            title: "IA Aplicada",
+            skills: ["RAG", "Embeddings", "Busca Semântica", "Engenharia de Prompt", "Model Context Protocol (MCP)", "Agentes de Código"]
         },
         {
             title: "Bancos de Dados",
-            skills: ["PostgreSQL", "MySQL", "SQL", "MongoDB", "Firebase"]
+            skills: ["PostgreSQL", "Row-Level Security", "SQL Server", "MongoDB", "Firebase", "Prisma"]
         },
         {
-            title: "Ferramentas",
-            skills: ["GitHub", "Gitea", "Tortoise SVN"]
+            title: "Infraestrutura e Cloud",
+            skills: ["Docker", "Docker Compose", "CI/CD", "Linux", "AWS", "Azure", "Apache Kafka", "Git"]
         },
         {
             title: "Metodologias",
-            skills: ["Testes Unitários", "Metodologia SCRUM"]
-        },
-        {
-            title: "Cloud (AWS)",
-            skills: ["S3Client", "Gerenciamento de Bucket e Objeto", "Configuração de Permissão", "Versionamento", "Integração Lambda", "CloudFront"]
+            skills: ["Scrum", "Kanban", "DDD", "SOLID", "Testes Unitários", "Code Review"]
         }
     ],
     softSkillsTitle: "HABILIDADES INTERPESSOAIS",
@@ -201,6 +223,20 @@ const ptData: PortfolioContent = {
         },
     ],
     projects: [
+        {
+            title: "Calculadora Move Brasil",
+            description: "Simulador de financiamento de carro novo para motoristas de aplicativo e taxistas no programa Move Brasil, com quase 20 mil usuários e mais de 26 mil simulações. Login com Google, simulação com entrada, carro na troca, carência e prazo, planos pagos e painel administrativo com métricas, vendas, gestão de usuários e campanhas de e-mail.",
+            tech: ["Next.js", "React", "Login com Google", "Pagamentos"],
+            link: "https://calculadoramovebrasil.com",
+            linkText: "Ver Projeto"
+        },
+        {
+            title: "glorific.art",
+            description: "E-commerce de moda cristã com vitrine, painel administrativo completo, login com Google, cálculo de frete e pagamento online. Front-end em React e API em .NET com Clean Architecture sobre PostgreSQL.",
+            tech: ["React", "Tailwind CSS", ".NET", "PostgreSQL"],
+            link: "https://glorific.art",
+            linkText: "Ver Projeto"
+        },
         {
             title: "Site Armory Consulting",
             description: "Desenvolvimento do site institucional para a Armory Consulting, empresa especializada em segurança da informação e GRC. O projeto foi construído com Next.js para alta performance e SEO, apresentando os serviços e a expertise da empresa de forma profissional e moderna.",
@@ -240,15 +276,15 @@ const enData: PortfolioContent = {
     personalInfo: {
         greeting: "Hello 👋, I am",
         name: "Fábio Garbato",
-        title: "Full Stack Developer",
+        title: "Senior Full-Stack Software Engineer",
         location: "Curitiba - PR, Brazil",
         email: "fabiogarbato3006@gmail.com",
         phone: "+55 (41) 98737-2059",
         whatsapp: "5541987372059",
-        summary: "Developer with experience in HTML5, C#, .NET, MS-SQL Server, CSS3, JavaScript (ES6+), Delphi, Python, React.js, VueJS, Bootstrap, Node.js, PostgreSQL, MySQL and JSON REST APIs. Experience in Scrum, unit testing, Git (Gitea) and GitHub for code control and project versioning, as well as e-commerce development (B2B, B2C) with Magento.",
-        yearsOfExperience: "+4 Years of Experience",
+        summary: "Full-stack engineer with 5 years building software, most of it in TypeScript, with React on the front end and Node.js and NestJS on the back end. Today I work on the core of Nexa Pulse, a multi-tenant SaaS analytics product, and I am senior engineer on CreditFlow, a credit analysis platform used by several companies. On both products I also own the AI features, such as RAG, semantic search and MCP servers. I like owning a feature from the screen down to the database, and I use coding agents every day, reviewing everything they produce before it ships.",
+        yearsOfExperience: "5+ Years Building Software",
         socials: [
-            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/f%C3%A1bio-garbato-046316196', icon: LinkedinIcon },
+            { name: 'LinkedIn', url: LINKEDIN_URL, icon: LinkedinIcon },
             { name: 'GitHub', url: 'https://github.com/fabiogarbato', icon: GithubIcon },
             { name: 'WhatsApp', url: 'https://wa.me/5541987372059', icon: WhatsAppIcon }
         ],
@@ -268,51 +304,71 @@ const enData: PortfolioContent = {
     },
     experience: [
         {
+            company: "Nexa Inteligência Estratégica",
+            role: "CTO and Software Architect (Contract)",
+            period: "February 2026 - Present",
+            description: [
+                "Build and maintain the core of Nexa Pulse, a multi-tenant SaaS analytics product: the React and TypeScript web app, the NestJS API and a Go data collector, deployed with Docker Compose to staging and production.",
+                "Set up the release process: deploys go to staging first, the live commit is checked through a health endpoint, and production only receives code that was validated in staging. Schema changes ship as versioned migrations.",
+                "Track down production issues by reproducing them in a staging environment that runs on an anonymized copy of production data, then fix and redeploy.",
+                "Implemented tenant isolation with PostgreSQL row-level security, plus a RAG pipeline and an MCP server that give AI agents permissioned access to platform data."
+            ]
+        },
+        {
+            company: "SIACorp",
+            role: "Senior Software Engineer (Contract)",
+            period: "October 2025 - Present",
+            description: [
+                "Senior engineer on CreditFlow, a credit analysis and management platform deployed for several enterprise clients and used by credit analysts to support lending decisions.",
+                "Handle client tickets and production incidents across client environments, from diagnosis to fix and a clear written answer to the client.",
+                "Built document extraction from unstructured documents, automated credit policy and limit checks, approval routing by authority level, and the integration with ERP and accounting systems.",
+                "Own the AI features behind CreditVision and CreditChat, with RAG and semantic search over credit policies and prior analyses, and a cited source on every answer."
+            ]
+        },
+        {
             company: "CCM do Brasil",
-            role: "FullStack Software Developer",
-            period: "June 2024 - Present",
+            role: "Mid-Level Full-Stack Developer",
+            period: "June 2024 - October 2025",
             description: [
-                "Development of web applications using React, Bootstrap, Node.js, JavaScript, HTML, and CSS.",
-                "Integration with Firebase for authentication and real-time database, as well as development of REST APIs.",
-                "Implementation of concurrent programming for process optimization and performance improvement of applications."
+                "Led the migration of the legacy Post-Sales and Service Order module from Pascal to React.js, Node.js and Express, rebuilding every core workflow and cutting average processing time by 70%.",
+                "Built an image processing and storage API with automatic compression, and moved the company's media hosting to a new server with no downtime on the live site.",
+                "Delivered event-driven features with Apache Kafka on Azure, deployed through CI/CD pipelines."
             ]
         },
         {
             company: "MPS Informática",
-            role: "FullStack Developer",
-            period: "Jan 2024 - Aug 2024",
+            role: "Software Developer (Intern to Mid-Level)",
+            period: "October 2021 - September 2024",
             description: [
-                "Development of web applications with HTML5, CSS3, Node.js, React, Bootstrap, and Vue.js.",
-                "Maintenance of existing legacy systems with Delphi 7/XE.",
-                "Collaboration with multidisciplinary teams, using the SCRUM methodology.",
-                "Development of Python scripts for data extraction.",
-                "Development of REST APIs using C# and .NET."
+                "Maintained a C# and ASP.NET integration API exchanging JSON between systems.",
+                "Tuned SQL Server procedures, triggers and queries, making the queries I optimized up to 60% faster.",
+                "Delivered a database migration end to end, with Python extraction routines against the legacy system and validation of the migrated data.",
+                "Built web interfaces in React and wrote unit tests."
             ]
         },
         {
-            company: "MPS Informática",
-            role: "Junior Developer",
-            period: "Aug 2022 - Dec 2023",
+            company: "Grupo Positivo",
+            role: "Network and Infrastructure Intern (N3)",
+            period: "January 2021 - October 2021",
             description: [
-                "Maintenance of existing legacy systems with Delphi 7/XE.",
-                "Development and maintenance of REST APIs using C# and .NET.",
-                "Collaboration with multidisciplinary teams, using the SCRUM methodology.",
-                "Creation of Procedures, Triggers, and Views in MS-SQL Server database.",
-                "Development of complex queries to support clients in MS-SQL Server database.",
-                "Unit Testing."
+                "FortiGate firewalls, Cisco switching, VLAN segmentation and Cisco VoIP telephony."
             ]
         },
         {
-            company: "MPS Informática",
-            role: "Intern - Developer",
-            period: "Oct 2021 - Jul 2022",
+            company: "Olimpio Tecnologia",
+            role: "Technical Support Intern (N1)",
+            period: "February 2020 - January 2021",
             description: [
-                "Maintenance of existing legacy systems with Delphi 7/XE.",
-                "Development and maintenance of REST APIs using C# and .NET."
+                "ERP support across SQL databases, networking and hardware."
             ]
         }
     ],
     education: [
+        {
+            institution: "Universidade Católica do Salvador",
+            degree: "Postgraduate Certificate in Machine Learning (in progress)",
+            period: "2026 - 2027"
+        },
         {
             institution: "Universidade Positivo",
             degree: "Bachelor's Degree in Computer Science",
@@ -321,28 +377,28 @@ const enData: PortfolioContent = {
     ],
     skills: [
         {
-            title: "Programming Languages",
-            skills: ["Python", "Javascript (ES6+)", "Delphi 7/XE/10", "C#", "HTML5", "CSS3"]
+            title: "Front-end",
+            skills: ["TypeScript", "JavaScript", "React", "Next.js", "Vite", "Tailwind CSS", "TanStack Query", "Zustand", "HTML5", "CSS3"]
         },
         {
-            title: "Frameworks & Libraries",
-            skills: ["React", "Node.js", "VueJS", "Express", "Bootstrap", "Flask", ".NET 5.0/8.0", "Sequelize"]
+            title: "Back-end",
+            skills: ["NestJS", "Node.js", "Express", "C#", ".NET", "Go", "Python", "REST APIs"]
+        },
+        {
+            title: "Applied AI",
+            skills: ["RAG", "Embeddings", "Semantic Search", "Prompt Engineering", "Model Context Protocol (MCP)", "Coding Agents"]
         },
         {
             title: "Databases",
-            skills: ["PostgreSQL", "MySQL", "SQL", "MongoDB", "Firebase"]
+            skills: ["PostgreSQL", "Row-Level Security", "SQL Server", "MongoDB", "Firebase", "Prisma"]
         },
         {
-            title: "Tools",
-            skills: ["GitHub", "Gitea", "Tortoise SVN"]
+            title: "Infrastructure and Cloud",
+            skills: ["Docker", "Docker Compose", "CI/CD", "Linux", "AWS", "Azure", "Apache Kafka", "Git"]
         },
         {
             title: "Methodologies",
-            skills: ["Unit Testing", "SCRUM Methodology"]
-        },
-        {
-            title: "Cloud (AWS)",
-            skills: ["S3Client", "Bucket & Object Management", "Permission Configuration", "Versioning", "Lambda Integration", "CloudFront"]
+            skills: ["Scrum", "Kanban", "DDD", "SOLID", "Unit Testing", "Code Review"]
         }
     ],
     softSkillsTitle: "SOFT SKILLS",
@@ -369,6 +425,20 @@ const enData: PortfolioContent = {
         },
     ],
     projects: [
+        {
+            title: "Move Brasil Calculator",
+            description: "Car financing simulator for ride-hailing and taxi drivers in Brazil's Move Brasil program, with almost 20,000 users and more than 26,000 simulations. Google sign-in, simulations with down payment, trade-in, grace period and term, paid plans, and an admin panel with metrics, sales, user management and email campaigns.",
+            tech: ["Next.js", "React", "Google Sign-In", "Payments"],
+            link: "https://calculadoramovebrasil.com",
+            linkText: "View Project"
+        },
+        {
+            title: "glorific.art",
+            description: "Christian fashion e-commerce with a storefront, a full admin panel, Google sign-in, shipping quotes and online payment. React front end and a .NET API built with Clean Architecture on PostgreSQL.",
+            tech: ["React", "Tailwind CSS", ".NET", "PostgreSQL"],
+            link: "https://glorific.art",
+            linkText: "View Project"
+        },
         {
             title: "Armory Consulting Website",
             description: "Development of the institutional website for Armory Consulting, a company specializing in information security and GRC. The project was built with Next.js for high performance and SEO, showcasing the company's services and expertise in a professional and modern way.",
