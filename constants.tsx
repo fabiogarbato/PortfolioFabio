@@ -124,6 +124,17 @@ const ptData: PortfolioContent = {
             ]
         },
         {
+            company: "Moddara",
+            role: "Engenheiro de Software Full Stack (Freelance)",
+            period: "Maio 2026 - Outubro 2026",
+            description: [
+                "Construí o Moddara Studio do primeiro commit até produção: um SaaS multi-tenant que transforma a foto da peça em fotos de moda geradas por IA, com modelos virtuais em cenários brasileiros.",
+                "Back-end em .NET 8 com Clean Architecture (MediatR, EF Core e PostgreSQL), jobs em segundo plano com Hangfire e Redis, imagens no Azure Blob Storage e deploy com Docker.",
+                "Pipeline de geração com IA com controle de fidelidade da peça: tecido, caimento, logo, frente e costas, e fotos da peça vestida como referência.",
+                "Monetização completa: cadastro self-service pago com trava contra abuso, recursos liberados por plano, reserva de créditos por geração, recarga e mensalidade via InfinitePay, catálogos em PDF e rastreamento de conversão com GA4, Meta Pixel e LinkedIn."
+            ]
+        },
+        {
             company: "CCM do Brasil",
             role: "Desenvolvedor Full Stack Pleno",
             period: "Junho 2024 - Outubro 2025",
@@ -232,6 +243,13 @@ const ptData: PortfolioContent = {
             linkText: "Ver Projeto"
         },
         {
+            title: "Moddara Studio",
+            description: "SaaS de fotos de moda com IA: a marca envia a foto da peça e recebe fotos com modelos virtuais em cenários brasileiros, catálogos automáticos e publicação em e-commerce e ERP. Multi-tenant, com planos pagos e cobrança por créditos.",
+            tech: [".NET 8", "PostgreSQL", "IA Generativa", "Azure"],
+            link: "https://moddara.com",
+            linkText: "Ver Projeto"
+        },
+        {
             title: "glorific.art",
             description: "E-commerce de moda cristã com vitrine, painel administrativo completo, login com Google, cálculo de frete e pagamento online. Front-end em React e API em .NET com Clean Architecture sobre PostgreSQL.",
             tech: ["React", "Tailwind CSS", ".NET", "PostgreSQL"],
@@ -243,13 +261,6 @@ const ptData: PortfolioContent = {
             description: "Desenvolvimento do site institucional para a Armory Consulting, empresa especializada em segurança da informação e GRC. O projeto foi construído com Next.js para alta performance e SEO, apresentando os serviços e a expertise da empresa de forma profissional e moderna.",
             tech: ["React", "Next.js", "Tailwind CSS"],
             link: "https://armory-consulting.vercel.app",
-            linkText: "Ver Projeto"
-        },
-        {
-            title: "Site Restaurante Miyō",
-            description: "Desenvolvimento de um site moderno e responsivo para o Restaurante Miyō, substituindo a versão antiga. Foco na experiência do usuário, apresentando um cardápio digital interativo.",
-            tech: ["React", "TypeScript", "Tailwind CSS"],
-            link: "https://restaurante-miyo-culin-ria-japonesa-694424017368.us-west1.run.app/#cardapio",
             linkText: "Ver Projeto"
         },
         {
@@ -324,6 +335,17 @@ const enData: PortfolioContent = {
                 "Handle client tickets and production incidents across client environments, from diagnosis to fix and a clear written answer to the client.",
                 "Built document extraction from unstructured documents, automated credit policy and limit checks, approval routing by authority level, and the integration with ERP and accounting systems.",
                 "Own the AI features behind CreditVision and CreditChat, with RAG and semantic search over credit policies and prior analyses, and a cited source on every answer."
+            ]
+        },
+        {
+            company: "Moddara",
+            role: "Full-Stack Software Engineer (Freelance)",
+            period: "May 2026 - October 2026",
+            description: [
+                "Built Moddara Studio from the first commit to production: a multi-tenant SaaS that turns product photos into AI-generated fashion photos, with virtual models in Brazilian settings.",
+                ".NET 8 back end with Clean Architecture (MediatR, EF Core and PostgreSQL), background jobs with Hangfire and Redis, images on Azure Blob Storage, and Docker deployment.",
+                "AI generation pipeline with garment fidelity controls: fabric, fit, logo, front and back, and worn reference photos.",
+                "Full monetization: paid self-service signup with abuse protection, plan gating, credit reservation per generation, top-ups and monthly billing through InfinitePay, PDF catalogs, and conversion tracking with GA4, Meta Pixel and LinkedIn."
             ]
         },
         {
@@ -435,6 +457,13 @@ const enData: PortfolioContent = {
             linkText: "View Project"
         },
         {
+            title: "Moddara Studio",
+            description: "AI fashion photo SaaS: brands upload a product photo and get photos with virtual models in Brazilian settings, automatic catalogs and publishing to e-commerce and ERP. Multi-tenant, with paid plans and credit-based billing.",
+            tech: [".NET 8", "PostgreSQL", "Generative AI", "Azure"],
+            link: "https://moddara.com",
+            linkText: "View Project"
+        },
+        {
             title: "glorific.art",
             description: "Christian fashion e-commerce with a storefront, a full admin panel, Google sign-in, shipping quotes and online payment. React front end and a .NET API built with Clean Architecture on PostgreSQL.",
             tech: ["React", "Tailwind CSS", ".NET", "PostgreSQL"],
@@ -446,13 +475,6 @@ const enData: PortfolioContent = {
             description: "Development of the institutional website for Armory Consulting, a company specializing in information security and GRC. The project was built with Next.js for high performance and SEO, showcasing the company's services and expertise in a professional and modern way.",
             tech: ["React", "Next.js", "Tailwind CSS"],
             link: "https://armory-consulting.vercel.app",
-            linkText: "View Project"
-        },
-        {
-            title: "Miyō Restaurant Website",
-            description: "Developed a modern and responsive website for Miyō Restaurant, replacing their old site. The focus was on user experience, featuring an interactive digital menu.",
-            tech: ["React", "TypeScript", "Tailwind CSS"],
-            link: "https://restaurante-miyo-culin-ria-japonesa-694424017368.us-west1.run.app/#cardapio",
             linkText: "View Project"
         },
         {
